@@ -1,11 +1,11 @@
 <?php
 /**
- * @link https://github.com/creocoder/yii2-flysystem
+ * @link https://github.com/sorokinmedia/yii2-flysystem
  * @copyright Copyright (c) 2015 Alexander Kochetov
  * @license http://opensource.org/licenses/BSD-3-Clause
  */
 
-namespace creocoder\flysystem;
+namespace sorokinmedia\flysystem;
 
 use Aws\S3\S3Client;
 use League\Flysystem\AwsS3v3\AwsS3Adapter;
@@ -14,7 +14,7 @@ use yii\base\InvalidConfigException;
 /**
  * AwsS3Filesystem
  *
- * @author Alexander Kochetov <creocoder@gmail.com>
+ * @author Alexander Kochetov <sorokinmedia@gmail.com>
  */
 class AwsS3Filesystem extends Filesystem
 {

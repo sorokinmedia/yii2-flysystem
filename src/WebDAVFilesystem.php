@@ -1,11 +1,11 @@
 <?php
 /**
- * @link https://github.com/creocoder/yii2-flysystem
+ * @link https://github.com/sorokinmedia/yii2-flysystem
  * @copyright Copyright (c) 2015 Alexander Kochetov
  * @license http://opensource.org/licenses/BSD-3-Clause
  */
 
-namespace creocoder\flysystem;
+namespace sorokinmedia\flysystem;
 
 use League\Flysystem\WebDAV\WebDAVAdapter;
 use Sabre\DAV\Client;
@@ -14,7 +14,7 @@ use yii\base\InvalidConfigException;
 /**
  * WebDAVFilesystem
  *
- * @author Alexander Kochetov <creocoder@gmail.com>
+ * @author Alexander Kochetov <sorokinmedia@gmail.com>
  */
 class WebDAVFilesystem extends Filesystem
 {

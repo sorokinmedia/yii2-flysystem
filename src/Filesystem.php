@@ -1,11 +1,11 @@
 <?php
 /**
- * @link https://github.com/creocoder/yii2-flysystem
+ * @link https://github.com/sorokinmedia/yii2-flysystem
  * @copyright Copyright (c) 2015 Alexander Kochetov
  * @license http://opensource.org/licenses/BSD-3-Clause
  */
 
-namespace creocoder\flysystem;
+namespace sorokinmedia\flysystem;
 
 use League\Flysystem\AdapterInterface;
 use League\Flysystem\Cached\CachedAdapter;
@@ -52,7 +52,7 @@ use yii\caching\Cache;
  * @method boolean write(string $path, string $contents, array $config = [])
  * @method boolean writeStream(string $path, resource $resource, array $config = [])
  *
- * @author Alexander Kochetov <creocoder@gmail.com>
+ * @author Alexander Kochetov <sorokinmedia@gmail.com>
  */
 abstract class Filesystem extends Component
 {
@@ -104,7 +104,7 @@ abstract class Filesystem extends Component
             $filesystem = Yii::$app->get($this->replica);
 
             if (!$filesystem instanceof Filesystem) {
-                throw new InvalidConfigException('The "replica" property must be an instance of \creocoder\flysystem\Filesystem subclasses.');
+                throw new InvalidConfigException('The "replica" property must be an instance of \sorokinmedia\flysystem\Filesystem subclasses.');
             }
 
             $adapter = new ReplicateAdapter($adapter, $filesystem->getAdapter());
