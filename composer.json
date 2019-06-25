@@ -1,5 +1,5 @@
 {
-    "name": "creocoder/yii2-flysystem",
+    "name": "sorokinmedia/yii2-flysystem",
     "description": "The flysystem extension for the Yii framework",
     "keywords": [
         "yii2",
@@ -15,14 +15,16 @@
         "gridfs",
         "rackspace",
         "sftp",
-        "webdav"
+        "webdav",
+        "digitalocean",
+        "digitaloceanspaces"
     ],
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "authors": [
         {
-            "name": "Alexander Kochetov",
-            "email": "creocoder@gmail.com"
+            "name": "Ruslan Gilyazetdinov",
+            "email": "Ma3oBblu@gmail.com"
         }
     ],
     "require": {
@@ -50,7 +52,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "creocoder\\flysystem\\": "src"
+            "sorokinmedia\\flysystem\\": "src"
         }
     }
 }

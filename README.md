@@ -1,8 +1,8 @@
 # Flysystem Extension for Yii 2
 
-[![Code Quality](https://img.shields.io/scrutinizer/g/creocoder/yii2-flysystem/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/creocoder/yii2-flysystem/?branch=master)
-[![Packagist Version](https://img.shields.io/packagist/v/creocoder/yii2-flysystem.svg?style=flat-square)](https://packagist.org/packages/creocoder/yii2-flysystem)
-[![Total Downloads](https://img.shields.io/packagist/dt/creocoder/yii2-flysystem.svg?style=flat-square)](https://packagist.org/packages/creocoder/yii2-flysystem)
+[![Code Quality](https://img.shields.io/scrutinizer/g/sorokinmedia/yii2-flysystem/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/sorokinmedia/yii2-flysystem/?branch=master)
+[![Packagist Version](https://img.shields.io/packagist/v/sorokinmedia/yii2-flysystem.svg?style=flat-square)](https://packagist.org/packages/sorokinmedia/yii2-flysystem)
+[![Total Downloads](https://img.shields.io/packagist/dt/sorokinmedia/yii2-flysystem.svg?style=flat-square)](https://packagist.org/packages/sorokinmedia/yii2-flysystem)
 
 This extension provides [Flysystem](http://flysystem.thephpleague.com/) integration for the Yii framework.
 [Flysystem](http://flysystem.thephpleague.com/) is a filesystem abstraction which allows you to easily swap out a local filesystem for a remote one.
@@ -14,13 +14,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```bash
-$ composer require creocoder/yii2-flysystem
+$ composer require sorokinmedia/yii2-flysystem
 ```
 
 or add
 
 ```
-"creocoder/yii2-flysystem": "0.8.*"
+"sorokinmedia/yii2-flysystem": "0.8.*"
 ```
 
 to the `require` section of your `composer.json` file.
@@ -37,7 +37,7 @@ return [
     'components' => [
         //...
         'fs' => [
-            'class' => 'creocoder\flysystem\LocalFilesystem',
+            'class' => 'sorokinmedia\flysystem\LocalFilesystem',
             'path' => '@webroot/files',
         ],
     ],
@@ -54,7 +54,7 @@ return [
     'components' => [
         //...
         'ftpFs' => [
-            'class' => 'creocoder\flysystem\FtpFilesystem',
+            'class' => 'sorokinmedia\flysystem\FtpFilesystem',
             'host' => 'ftp.example.com',
             // 'port' => 21,
             // 'username' => 'your-username',
@@ -81,7 +81,7 @@ return [
     'components' => [
         //...
         'nullFs' => [
-            'class' => 'creocoder\flysystem\NullFilesystem',
+            'class' => 'sorokinmedia\flysystem\NullFilesystem',
         ],
     ],
 ];
@@ -109,7 +109,7 @@ return [
     'components' => [
         //...
         'awss3Fs' => [
-            'class' => 'creocoder\flysystem\AwsS3Filesystem',
+            'class' => 'sorokinmedia\flysystem\AwsS3Filesystem',
             'key' => 'your-key',
             'secret' => 'your-secret',
             'bucket' => 'your-bucket',
@@ -155,7 +155,7 @@ return [
     'components' => [
         //...
         'azureFs' => [
-            'class' => 'creocoder\flysystem\AzureFilesystem',
+            'class' => 'sorokinmedia\flysystem\AzureFilesystem',
             'accountName' => 'your-account-name',
             'accountKey' => 'your-account-key',
             'container' => 'your-container',
@@ -186,7 +186,7 @@ return [
     'components' => [
         //...
         'copyFs' => [
-            'class' => 'creocoder\flysystem\CopyFilesystem',
+            'class' => 'sorokinmedia\flysystem\CopyFilesystem',
             'consumerKey' => 'your-consumer-key',
             'consumerSecret' => 'your-consumer-secret',
             'accessToken' => 'your-access-token',
@@ -219,7 +219,7 @@ return [
     'components' => [
         //...
         'dropboxFs' => [
-            'class' => 'creocoder\flysystem\DropboxFilesystem',
+            'class' => 'sorokinmedia\flysystem\DropboxFilesystem',
             'token' => 'your-token',
             'app' => 'your-app',
             // 'prefix' => 'your-prefix',
@@ -244,7 +244,7 @@ return [
     'components' => [
         //...
         'googleCloudFs' => [
-            'class' => 'creocoder\flysystem\GoogleCloudFilesystem',
+            'class' => 'sorokinmedia\flysystem\GoogleCloudFilesystem',
             'projectId' => 'GOOGLE_PROJECT_ID',
             'bucket' => 'GOOGLE_BUCKET',
             'keyFilePath' => 'GOOGLE_KEY_FILE_PATH',
@@ -277,7 +277,7 @@ return [
     'components' => [
         //...
         'gridFs' => [
-            'class' => 'creocoder\flysystem\GridFSFilesystem',
+            'class' => 'sorokinmedia\flysystem\GridFSFilesystem',
             'server' => 'mongodb://localhost:27017',
             'database' => 'your-database',
         ],
@@ -307,7 +307,7 @@ return [
     'components' => [
         //...
         'rackspaceFs' => [
-            'class' => 'creocoder\flysystem\RackspaceFilesystem',
+            'class' => 'sorokinmedia\flysystem\RackspaceFilesystem',
             'endpoint' => 'your-endpoint',
             'region' => 'your-region',
             'username' => 'your-username',
@@ -341,7 +341,7 @@ return [
     'components' => [
         //...
         'sftpFs' => [
-            'class' => 'creocoder\flysystem\SftpFilesystem',
+            'class' => 'sorokinmedia\flysystem\SftpFilesystem',
             'host' => 'sftp.example.com',
             // 'port' => 22,
             'username' => 'your-username',
@@ -378,7 +378,7 @@ return [
     'components' => [
         //...
         'webdavFs' => [
-            'class' => 'creocoder\flysystem\WebDAVFilesystem',
+            'class' => 'sorokinmedia\flysystem\WebDAVFilesystem',
             'baseUri' => 'your-base-uri',
             // 'userName' => 'your-user-name',
             // 'password' => 'your-password',
@@ -413,7 +413,7 @@ return [
     'components' => [
         //...
         'ziparchiveFs' => [
-            'class' => 'creocoder\flysystem\ZipArchiveFilesystem',
+            'class' => 'sorokinmedia\flysystem\ZipArchiveFilesystem',
             'path' => '@webroot/files/archive.zip',
             // 'prefix' => 'your-prefix',
         ],
@@ -720,9 +720,3 @@ $info = Yii::$app->fs->getWithMetadata('path/to/filename.ext', ['timestamp', 'mi
 echo $info['mimetype'];
 echo $info['timestamp'];
 ```
-
-## Donating
-
-Support this project and [others by creocoder](https://gratipay.com/creocoder/) via [gratipay](https://gratipay.com/creocoder/).
-
-[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.svg)](https://gratipay.com/creocoder/)
